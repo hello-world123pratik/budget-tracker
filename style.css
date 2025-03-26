@@ -1,0 +1,148 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #4CAF50;
+    --bg-light: #f4f4f4;
+    --bg-dark: #222;
+    --text-light: #fff;
+    --text-dark: #333;
+    --card-bg-light: #fff;
+    --card-bg-dark: #333;
+    --border-light: #ddd;
+    --border-dark: #444;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+h2 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Auth Section */
+#auth-section {
+    background: var(--card-bg-light);
+    padding: 30px;  /* Increased padding for better spacing */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    width: 420px;  /* Increased width for better layout */
+    margin-top: 50px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Responsive Adjustment */
+@media (max-width: 500px) {
+    #auth-section {
+        width: 90%; /* Auto-adjust width for smaller screens */
+        padding: 20px;
+    }
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--border-light);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #388E3C;
+}
+
+/* App Section */
+#app-section {
+    background: var(--card-bg-light);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+#transaction-list {
+    list-style: none;
+    padding: 0;
+}
+
+#transaction-list li {
+    background: var(--bg-light);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border-left: 5px solid var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+canvas {
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+.dark-mode #auth-section,
+.dark-mode #app-section {
+    background: var(--card-bg-dark);
+    box-shadow: none;
+}
+
+.dark-mode input, 
+.dark-mode select {
+    background: var(--card-bg-dark);
+    color: var(--text-light);
+    border: 1px solid var(--border-dark);
+}
+
+.dark-mode button {
+    background-color: #66BB6A;
+}
+
+.dark-mode button:hover {
+    background-color: #43A047;
+}
+
+.dark-mode #transaction-list li {
+    background: var(--bg-dark);
+    border-left-color: #66BB6A;
+}
+
+.dark-mode canvas {
+    background: var(--bg-dark);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    #app-section, #auth-section {
+        width: 90%;
+    }
+}
